@@ -47,16 +47,25 @@
                                         <color key="backgroundColor" red="1" green="0.75" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <state key="normal" title="1"/>
+                                        <connections>
+                                            <action selector="pickMatches:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TPw-oc-Vxd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6b-Ht-79H">
                                         <color key="backgroundColor" red="1" green="0.75" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <state key="normal" title="2"/>
+                                        <connections>
+                                            <action selector="pickMatches:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V2C-G4-sLZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXc-lV-mC6">
                                         <color key="backgroundColor" red="1" green="0.75" blue="0.0" alpha="0.25" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <state key="normal" title="3"/>
+                                        <connections>
+                                            <action selector="pickMatches:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LOo-52-2Qk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -68,6 +77,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5L-3h-zMp">
                                 <accessibility key="accessibilityConfiguration" identifier="new-game-button"/>
                                 <state key="normal" title="Start New Game"/>
+                                <connections>
+                                    <action selector="beginNewGame" destination="BYZ-38-t0r" eventType="touchUpInside" id="oI8-TW-BMG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
