@@ -30,11 +30,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VtZ-nA-opW">
+                                <accessibility key="accessibilityConfiguration" identifier="matches_count"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joueur 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBb-b6-EiD">
+                                <accessibility key="accessibilityConfiguration" identifier="current_player"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,6 +66,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p5L-3h-zMp">
+                                <accessibility key="accessibilityConfiguration" identifier="new-game-button"/>
                                 <state key="normal" title="Start New Game"/>
                             </button>
                         </subviews>
@@ -84,6 +87,14 @@
                             <constraint firstItem="VtZ-nA-opW" firstAttribute="top" secondItem="hSu-8v-tH7" secondAttribute="bottom" constant="30" id="xgS-8G-nyM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ui_currentPlayerLabel" destination="TBb-b6-EiD" id="ixy-am-lgf"/>
+                        <outlet property="ui_matchesCountLabel" destination="VtZ-nA-opW" id="ywG-ug-gOV"/>
+                        <outlet property="ui_newGameButton" destination="p5L-3h-zMp" id="kOK-x6-ntp"/>
+                        <outlet property="ui_pick1MatchesButton" destination="BKB-QA-CqY" id="DL5-HM-cYQ"/>
+                        <outlet property="ui_pick2MatchesButton" destination="L6b-Ht-79H" id="VM0-mL-Ggo"/>
+                        <outlet property="ui_pick3MatchesButton" destination="bXc-lV-mC6" id="TxS-s9-N3O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

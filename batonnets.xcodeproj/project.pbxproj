@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8809C12A1DD9CE9E00D72C91 /* batonnetsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1291DD9CE9E00D72C91 /* batonnetsUITests.swift */; };
+		8809C1381DD9D08400D72C91 /* batonnetsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1371DD9D08400D72C91 /* batonnetsTests.swift */; };
+		8809C1421DD9D14000D72C91 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1411DD9D14000D72C91 /* Player.swift */; };
+		8809C1431DD9D14000D72C91 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1411DD9D14000D72C91 /* Player.swift */; };
+		8809C1441DD9D14000D72C91 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1411DD9D14000D72C91 /* Player.swift */; };
 		88F0884A1DD4732E006DA370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F088491DD4732E006DA370 /* AppDelegate.swift */; };
 		88F0884C1DD4732E006DA370 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F0884B1DD4732E006DA370 /* ViewController.swift */; };
 		88F0884F1DD4732E006DA370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F0884D1DD4732E006DA370 /* Main.storyboard */; };
@@ -14,7 +19,31 @@
 		88F088541DD4732E006DA370 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F088521DD4732E006DA370 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8809C12C1DD9CE9E00D72C91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88F0883E1DD4732E006DA370 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88F088451DD4732E006DA370;
+			remoteInfo = batonnets;
+		};
+		8809C13A1DD9D08400D72C91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88F0883E1DD4732E006DA370 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88F088451DD4732E006DA370;
+			remoteInfo = batonnets;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		8809C1271DD9CE9E00D72C91 /* batonnetsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = batonnetsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8809C1291DD9CE9E00D72C91 /* batonnetsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = batonnetsUITests.swift; sourceTree = "<group>"; };
+		8809C12B1DD9CE9E00D72C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8809C1351DD9D08400D72C91 /* batonnetsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = batonnetsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8809C1371DD9D08400D72C91 /* batonnetsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = batonnetsTests.swift; sourceTree = "<group>"; };
+		8809C1391DD9D08400D72C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8809C1411DD9D14000D72C91 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		88F088461DD4732E006DA370 /* batonnets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = batonnets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F088491DD4732E006DA370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88F0884B1DD4732E006DA370 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +54,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8809C1241DD9CE9E00D72C91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8809C1321DD9D08400D72C91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88F088431DD4732E006DA370 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +78,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8809C1281DD9CE9E00D72C91 /* batonnetsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8809C1291DD9CE9E00D72C91 /* batonnetsUITests.swift */,
+				8809C12B1DD9CE9E00D72C91 /* Info.plist */,
+			);
+			path = batonnetsUITests;
+			sourceTree = "<group>";
+		};
+		8809C1361DD9D08400D72C91 /* batonnetsTests */ = {
+			isa = PBXGroup;
+			children = (
+				8809C1371DD9D08400D72C91 /* batonnetsTests.swift */,
+				8809C1391DD9D08400D72C91 /* Info.plist */,
+			);
+			path = batonnetsTests;
+			sourceTree = "<group>";
+		};
 		88F0883D1DD4732E006DA370 = {
 			isa = PBXGroup;
 			children = (
 				88F088481DD4732E006DA370 /* batonnets */,
+				8809C1281DD9CE9E00D72C91 /* batonnetsUITests */,
+				8809C1361DD9D08400D72C91 /* batonnetsTests */,
 				88F088471DD4732E006DA370 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +110,8 @@
 			isa = PBXGroup;
 			children = (
 				88F088461DD4732E006DA370 /* batonnets.app */,
+				8809C1271DD9CE9E00D72C91 /* batonnetsUITests.xctest */,
+				8809C1351DD9D08400D72C91 /* batonnetsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,6 +121,7 @@
 			children = (
 				88F088491DD4732E006DA370 /* AppDelegate.swift */,
 				88F0884B1DD4732E006DA370 /* ViewController.swift */,
+				8809C1411DD9D14000D72C91 /* Player.swift */,
 				88F0884D1DD4732E006DA370 /* Main.storyboard */,
 				88F088501DD4732E006DA370 /* Assets.xcassets */,
 				88F088521DD4732E006DA370 /* LaunchScreen.storyboard */,
@@ -67,6 +133,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8809C1261DD9CE9E00D72C91 /* batonnetsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8809C12E1DD9CE9E00D72C91 /* Build configuration list for PBXNativeTarget "batonnetsUITests" */;
+			buildPhases = (
+				8809C1231DD9CE9E00D72C91 /* Sources */,
+				8809C1241DD9CE9E00D72C91 /* Frameworks */,
+				8809C1251DD9CE9E00D72C91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8809C12D1DD9CE9E00D72C91 /* PBXTargetDependency */,
+			);
+			name = batonnetsUITests;
+			productName = batonnetsUITests;
+			productReference = 8809C1271DD9CE9E00D72C91 /* batonnetsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		8809C1341DD9D08400D72C91 /* batonnetsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8809C13C1DD9D08400D72C91 /* Build configuration list for PBXNativeTarget "batonnetsTests" */;
+			buildPhases = (
+				8809C1311DD9D08400D72C91 /* Sources */,
+				8809C1321DD9D08400D72C91 /* Frameworks */,
+				8809C1331DD9D08400D72C91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8809C13B1DD9D08400D72C91 /* PBXTargetDependency */,
+			);
+			name = batonnetsTests;
+			productName = batonnetsTests;
+			productReference = 8809C1351DD9D08400D72C91 /* batonnetsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		88F088451DD4732E006DA370 /* batonnets */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 88F088581DD4732E006DA370 /* Build configuration list for PBXNativeTarget "batonnets" */;
@@ -94,6 +196,16 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = imac;
 				TargetAttributes = {
+					8809C1261DD9CE9E00D72C91 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 88F088451DD4732E006DA370;
+					};
+					8809C1341DD9D08400D72C91 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 88F088451DD4732E006DA370;
+					};
 					88F088451DD4732E006DA370 = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
@@ -114,11 +226,27 @@
 			projectRoot = "";
 			targets = (
 				88F088451DD4732E006DA370 /* batonnets */,
+				8809C1261DD9CE9E00D72C91 /* batonnetsUITests */,
+				8809C1341DD9D08400D72C91 /* batonnetsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8809C1251DD9CE9E00D72C91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8809C1331DD9D08400D72C91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88F088441DD4732E006DA370 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,16 +260,48 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8809C1231DD9CE9E00D72C91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8809C1431DD9D14000D72C91 /* Player.swift in Sources */,
+				8809C12A1DD9CE9E00D72C91 /* batonnetsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8809C1311DD9D08400D72C91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8809C1441DD9D14000D72C91 /* Player.swift in Sources */,
+				8809C1381DD9D08400D72C91 /* batonnetsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		88F088421DD4732E006DA370 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				88F0884C1DD4732E006DA370 /* ViewController.swift in Sources */,
+				8809C1421DD9D14000D72C91 /* Player.swift in Sources */,
 				88F0884A1DD4732E006DA370 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8809C12D1DD9CE9E00D72C91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88F088451DD4732E006DA370 /* batonnets */;
+			targetProxy = 8809C12C1DD9CE9E00D72C91 /* PBXContainerItemProxy */;
+		};
+		8809C13B1DD9D08400D72C91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88F088451DD4732E006DA370 /* batonnets */;
+			targetProxy = 8809C13A1DD9D08400D72C91 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		88F0884D1DD4732E006DA370 /* Main.storyboard */ = {
@@ -163,6 +323,56 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8809C12F1DD9CE9E00D72C91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = batonnetsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallinov.batonnetsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = batonnets;
+			};
+			name = Debug;
+		};
+		8809C1301DD9CE9E00D72C91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = batonnetsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallinov.batonnetsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = batonnets;
+			};
+			name = Release;
+		};
+		8809C13D1DD9D08400D72C91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = batonnetsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallinov.batonnetsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/batonnets.app/batonnets";
+			};
+			name = Debug;
+		};
+		8809C13E1DD9D08400D72C91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = batonnetsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wallinov.batonnetsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/batonnets.app/batonnets";
+			};
+			name = Release;
+		};
 		88F088561DD4732E006DA370 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -283,6 +493,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8809C12E1DD9CE9E00D72C91 /* Build configuration list for PBXNativeTarget "batonnetsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8809C12F1DD9CE9E00D72C91 /* Debug */,
+				8809C1301DD9CE9E00D72C91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8809C13C1DD9D08400D72C91 /* Build configuration list for PBXNativeTarget "batonnetsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8809C13D1DD9D08400D72C91 /* Debug */,
+				8809C13E1DD9D08400D72C91 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		88F088411DD4732E006DA370 /* Build configuration list for PBXProject "batonnets" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
