@@ -299,6 +299,7 @@
 				88F0885A1DD4732E006DA370 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
