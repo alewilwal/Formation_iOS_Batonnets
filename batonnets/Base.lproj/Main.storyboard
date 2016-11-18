@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -106,6 +107,51 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
+        <!--Scores-->
+        <scene sceneID="lPe-tJ-R8Z">
+            <objects>
+                <tableViewController id="B4Q-FN-FOF" customClass="ViewScoresTable" customModule="batonnets" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="iCf-57-2LD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="player-score" textLabel="YRe-H1-1Jr" detailTextLabel="2Cp-dl-b8i" style="IBUITableViewCellStyleValue1" id="DIn-Yi-0gr">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DIn-Yi-0gr" id="ZnM-S7-Ofs">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YRe-H1-1Jr">
+                                            <frame key="frameInset" minX="15" minY="11" width="34" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2Cp-dl-b8i">
+                                            <frame key="frameInset" minX="316" minY="11" width="44" height="21"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B4Q-FN-FOF" id="lCD-ny-zGe"/>
+                            <outlet property="delegate" destination="B4Q-FN-FOF" id="jWd-ch-gbL"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Scores" id="JZH-dY-54R"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbX-jW-2nW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="209" y="-1394"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BOA-KL-4Qv">
             <objects>
@@ -176,11 +222,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Bâtonnets Game" id="bmo-mQ-A4e">
-                        <barButtonItem key="leftBarButtonItem" title="New Player" id="gRP-bb-lFc">
-                            <connections>
-                                <segue destination="Jo6-kg-zCa" kind="show" id="tCu-ho-4Lt"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="New Player" id="gRP-bb-lFc">
+                                <connections>
+                                    <segue destination="Jo6-kg-zCa" kind="show" id="tCu-ho-4Lt"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Score" id="PdG-lt-bbt">
+                                <connections>
+                                    <segue destination="B4Q-FN-FOF" kind="show" id="AWl-Ma-Dlp"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="7Dn-ek-wbF">
                             <connections>
                                 <segue destination="rDn-r2-fY3" kind="show" identifier="settings" id="cAu-Sl-qSi"/>
@@ -199,7 +252,7 @@
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="-617.54122938530736"/>
         </scene>
-        <!--Players Scores-->
+        <!--New Players-->
         <scene sceneID="MRR-9i-eSm">
             <objects>
                 <viewController id="Jo6-kg-zCa" customClass="ViewPlayers" customModule="batonnets" customModuleProvider="target" sceneMemberID="viewController">
@@ -239,8 +292,12 @@
                             <constraint firstItem="BSa-IJ-sOc" firstAttribute="leading" secondItem="0s8-dv-0sS" secondAttribute="trailing" constant="10" id="rXv-94-RWQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Players Scores" id="uWt-9G-gkH">
-                        <barButtonItem key="rightBarButtonItem" title="Scores" id="Qab-ZV-rol"/>
+                    <navigationItem key="navigationItem" title="New Players" id="uWt-9G-gkH">
+                        <barButtonItem key="rightBarButtonItem" title="Scores" id="Qab-ZV-rol">
+                            <connections>
+                                <segue destination="B4Q-FN-FOF" kind="show" id="FvO-ib-E1Y"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="ui_newPlayer" destination="0s8-dv-0sS" id="kYD-ph-qcW"/>
@@ -308,4 +365,7 @@
             <point key="canvasLocation" x="969" y="-249"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="AWl-Ma-Dlp"/>
+    </inferredMetricsTieBreakers>
 </document>

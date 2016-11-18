@@ -24,6 +24,9 @@
 		8809C1541DDB016800D72C91 /* ViewStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1531DDB016700D72C91 /* ViewStart.swift */; };
 		8809C1551DDB016800D72C91 /* ViewStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1531DDB016700D72C91 /* ViewStart.swift */; };
 		8809C1561DDB016800D72C91 /* ViewStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1531DDB016700D72C91 /* ViewStart.swift */; };
+		8837BCD11DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BCD01DDEF93D00DEAA6A /* ViewScoresTable.swift */; };
+		8837BCD21DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BCD01DDEF93D00DEAA6A /* ViewScoresTable.swift */; };
+		8837BCD31DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BCD01DDEF93D00DEAA6A /* ViewScoresTable.swift */; };
 		88F0884A1DD4732E006DA370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F088491DD4732E006DA370 /* AppDelegate.swift */; };
 		88F0884C1DD4732E006DA370 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F0884B1DD4732E006DA370 /* ViewController.swift */; };
 		88F0884F1DD4732E006DA370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F0884D1DD4732E006DA370 /* Main.storyboard */; };
@@ -60,6 +63,7 @@
 		8809C14B1DD9F70600D72C91 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		8809C14F1DDA0E8000D72C91 /* ViewPlayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPlayers.swift; sourceTree = "<group>"; };
 		8809C1531DDB016700D72C91 /* ViewStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStart.swift; sourceTree = "<group>"; };
+		8837BCD01DDEF93D00DEAA6A /* ViewScoresTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewScoresTable.swift; sourceTree = "<group>"; };
 		88F088461DD4732E006DA370 /* batonnets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = batonnets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F088491DD4732E006DA370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88F0884B1DD4732E006DA370 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				8809C1471DD9E0CE00D72C91 /* ViewSettings.swift */,
 				8809C14F1DDA0E8000D72C91 /* ViewPlayers.swift */,
 				8809C1531DDB016700D72C91 /* ViewStart.swift */,
+				8837BCD01DDEF93D00DEAA6A /* ViewScoresTable.swift */,
 			);
 			path = batonnets;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 				8809C1551DDB016800D72C91 /* ViewStart.swift in Sources */,
 				8809C1491DD9E0CE00D72C91 /* ViewSettings.swift in Sources */,
 				8809C14D1DD9F70600D72C91 /* Settings.swift in Sources */,
+				8837BCD21DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */,
 				8809C12A1DD9CE9E00D72C91 /* batonnetsUITests.swift in Sources */,
 				8809C1511DDA0E8000D72C91 /* ViewPlayers.swift in Sources */,
 			);
@@ -301,6 +307,7 @@
 				8809C1561DDB016800D72C91 /* ViewStart.swift in Sources */,
 				8809C14A1DD9E0CE00D72C91 /* ViewSettings.swift in Sources */,
 				8809C14E1DD9F70600D72C91 /* Settings.swift in Sources */,
+				8837BCD31DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */,
 				8809C1381DD9D08400D72C91 /* batonnetsTests.swift in Sources */,
 				8809C1521DDA0E8000D72C91 /* ViewPlayers.swift in Sources */,
 			);
@@ -312,6 +319,7 @@
 			files = (
 				88F0884C1DD4732E006DA370 /* ViewController.swift in Sources */,
 				8809C1541DDB016800D72C91 /* ViewStart.swift in Sources */,
+				8837BCD11DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */,
 				8809C1481DD9E0CE00D72C91 /* ViewSettings.swift in Sources */,
 				8809C1421DD9D14000D72C91 /* Player.swift in Sources */,
 				88F0884A1DD4732E006DA370 /* AppDelegate.swift in Sources */,
