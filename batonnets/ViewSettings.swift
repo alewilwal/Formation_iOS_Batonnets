@@ -48,6 +48,7 @@ class ViewSettings: UIViewController {
     @IBAction func reinitializationData() {
         let playersArray:[String:Int] = [:]
         userDefaultsManager.set(playersArray, forKey: Player.PLAYER_KEY)
+        userDefaultsManager.set("20", forKey: Settings.MATCHES_KEY)
         print("Deleted")
     }
     

@@ -29,6 +29,7 @@ class ViewStart: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
     // Load UserDefaults in Arrays
     override func viewWillAppear(_ animated: Bool) {
         userDefaultsManager.register(defaults: ["Player" : [:]])
+        userDefaultsManager.register(defaults: ["Matches" : 20])
         playersArray = userDefaultsManager.object(forKey: Player.PLAYER_KEY) as! [String:Int]
 
         // For 1 Player an Array List
@@ -55,6 +56,15 @@ class ViewStart: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
         display()
         
     }
+    /*
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if let settingsVC = segue.destination as! ViewSettings {
+            settingsVC.game = _game
+        }
+
+    }
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()

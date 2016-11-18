@@ -532,6 +532,7 @@
 				8809C1301DD9CE9E00D72C91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8809C13C1DD9D08400D72C91 /* Build configuration list for PBXNativeTarget "batonnetsTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +541,7 @@
 				8809C13E1DD9D08400D72C91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88F088411DD4732E006DA370 /* Build configuration list for PBXProject "batonnets" */ = {
 			isa = XCConfigurationList;
