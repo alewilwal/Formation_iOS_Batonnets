@@ -9,13 +9,21 @@
 import UIKit
 
 class ViewSettings: UIViewController {
-
+    
+    private var _game:Game?
+    var game:Game? {
+        get {
+            return _game
+        }
+        set {
+            _game = newValue
+        }
+    }
     
     @IBOutlet weak var ui_setMatchesCountLabel: UILabel!
     @IBOutlet weak var ui_setMatchesCountSlider: UISlider!
     
     let step: Float = 5
-    let userDefaultsManager:UserDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +35,16 @@ class ViewSettings: UIViewController {
     
     // Load UserDefaults Number of Matches
     override func viewWillAppear(_ animated: Bool) {
-        ui_setMatchesCountSlider.value = Float(userDefaultsManager.integer(forKey: Settings.MATCHES_KEY))
-        ui_setMatchesCountLabel.text = "\(Int(ui_setMatchesCountSlider.value))"
+        updateDisplay()
     }
     
     // Save UserDefaults Number of Matches
-    override func viewWillDisappear(_ animated: Bool) {
-        userDefaultsManager.set(ui_setMatchesCountLabel.text, forKey: Settings.MATCHES_KEY)
+    @IBAction func saveInitialMatchesCount() {
+        if let text = ui_setMatchesCountLabel.text,
+            let count = Int(text),
+            count > 0 {
+            SettingsManager.instance.initialMatchesCount = count
+        }
     }
 
     // Change Number of Matches when slider changed
@@ -44,17 +55,19 @@ class ViewSettings: UIViewController {
 
     }
     
+    // Update Display
+    func updateDisplay(){
+        ui_setMatchesCountSlider.value = Float(SettingsManager.instance.getInitialMatchesCount())
+        ui_setMatchesCountLabel.text = "\(Int(ui_setMatchesCountSlider.value))"
+    }
+    
     // Reset Data
     @IBAction func reinitializationData() {
         let playersArray:[String:Int] = [:]
-        userDefaultsManager.set(playersArray, forKey: Player.PLAYER_KEY)
-        userDefaultsManager.set("20", forKey: Settings.MATCHES_KEY)
+        SettingsManager.instance.setPlayerArray(playersArray: playersArray)
+        SettingsManager.instance.saveInitialMatchesCount(newCount: 20)
+        updateDisplay()
         print("Deleted")
-    }
-    
-    // Hide View
-    @IBAction func hideSettingsButtonPressed() {
-        dismiss(animated: true, completion: nil)
     }
     
 

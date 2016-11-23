@@ -9,20 +9,33 @@
 import Foundation
 class Player {
     
-    public static let SCORE_KEY:String = "Score"
-    public static let PLAYER_KEY:String = "Player"
     public static let PLAYER1_KEY:String = "Player1"
     public static let PLAYER2_KEY:String = "Player2"
     
-    var name:String
-    var score:Int
+    var nickname:String {
+        return _nickname
+    }
     
-    init(name:String, score:Int) {
-        self.name = name
-        self.score = score
+    private var _nickname:String
+    var playedGames:Int = 0
+    var score:Int = 0
+    
+    init(nickname:String) {
+        _nickname = nickname
     }
     
     func win()  {
         score += 10
+        playedGames += 1
+    }
+    
+    func loss() {
+        score -= 5
+        score = max(0,score)
+        playedGames += 1
+    }
+    
+    static func == (lhs: Player, rhs: Player) -> Bool {
+        return lhs.nickname == rhs.nickname
     }
 }

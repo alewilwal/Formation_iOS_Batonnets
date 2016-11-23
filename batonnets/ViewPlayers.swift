@@ -12,8 +12,6 @@ class ViewPlayers: UIViewController, UIPickerViewDataSource, UIPickerViewDelegat
 
     @IBOutlet weak var ui_newPlayer: UITextField!
     @IBOutlet weak var ui_pickerPlayers: UIPickerView!
-    
-    let userDefaultsManager:UserDefaults = UserDefaults.standard
 
     var playersArray:[String:Int] = [:]
     
@@ -32,7 +30,7 @@ class ViewPlayers: UIViewController, UIPickerViewDataSource, UIPickerViewDelegat
     
     // Load UserDefaults
     override func viewWillAppear(_ animated: Bool) {
-        playersArray = userDefaultsManager.object(forKey: Player.PLAYER_KEY) as! [String:Int]
+        playersArray = SettingsManager.instance.getPlayerArray()
     
     }
     
@@ -42,7 +40,7 @@ class ViewPlayers: UIViewController, UIPickerViewDataSource, UIPickerViewDelegat
         let newPlayer:String! = ui_newPlayer.text
         if newPlayer != "" {
             playersArray[newPlayer] = 0
-            userDefaultsManager.set(playersArray, forKey: Player.PLAYER_KEY)
+            SettingsManager.instance.setPlayerArray(playersArray: playersArray)
         }
 
         // Hide Focus

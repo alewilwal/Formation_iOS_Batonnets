@@ -9,12 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var _game:Game?
+
     var _matchesCount:Int!
-    var _currentPlayer:String = "Joueur 1"
-    let userDefaultsManager:UserDefaults = UserDefaults.standard
-    var player1:String = "Joueur 1"
-    var player2:String = "Joueur 2"
-    var playersArray:[String:Int] = [:]
+    var _currentPlayer:String!
+    let _userDefaultsManager:UserDefaults = UserDefaults.standard
+    var _player1:String = "Player 2"
+    var _player2:String = "Player 1"
+    var _playersArray:[String:Int] = [:]
     
     @IBOutlet weak var ui_newGameButton: UIButton!
     @IBOutlet weak var ui_currentPlayerLabel: UILabel!
@@ -25,69 +28,80 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        userDefaultsManager.set(120, forKey: Player.SCORE_KEY)
-    }
+        updateDisplay()    }
     
     // Load UserDefaults Number of Matches and Players
     override func viewWillAppear(_ animated: Bool) {
-        _matchesCount = userDefaultsManager.integer(forKey: Settings.MATCHES_KEY)
-        player1 = userDefaultsManager.object(forKey: Player.PLAYER1_KEY) as! String
-        player2 = userDefaultsManager.object(forKey: Player.PLAYER2_KEY) as! String
-        playersArray = userDefaultsManager.object(forKey: Player.PLAYER_KEY) as! [String:Int]
+        _matchesCount = SettingsManager.instance.getInitialMatchesCount()
+        _player1 = _userDefaultsManager.object(forKey: Player.PLAYER1_KEY) as! String
+        _player2 = _userDefaultsManager.object(forKey: Player.PLAYER2_KEY) as! String
+        _playersArray = SettingsManager.instance.getPlayerArray()
         beginNewGame()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        let userDefaultsManager:UserDefaults = UserDefaults.standard
-        let score:Int = userDefaultsManager.integer(forKey: Player.SCORE_KEY)
-        ui_currentPlayerLabel.text = "Score : \(score)"
     }
     
     // Display All Changes
-    func updateDisplay() {
-        ui_matchesCountLabel.text = "\(_matchesCount!)"
-        if _matchesCount <= 0 {
-            playersArray[_currentPlayer]? += 10
-            userDefaultsManager.set(playersArray, forKey: Player.PLAYER_KEY)
-            ui_currentPlayerLabel.text = "\(_currentPlayer) a gagné"
-            ui_newGameButton.isHidden = false
+    private func updateDisplay() {
+        if let gameInProgress = _game {
+            let matchesCount = gameInProgress.matchesCount
+            ui_matchesCountLabel.text = "\(matchesCount)"
+            if gameInProgress.isGameOver,
+                let winner = gameInProgress.winner {
+                ui_currentPlayerLabel.text = "\(winner.nickname) a gagné"
+                
+                //winner.win()
+                print("New Score Winner : \(winner.nickname) == \(winner.score)")
+                _playersArray[winner.nickname] = _playersArray[winner.nickname]! + 10
+                
+                ui_newGameButton.isHidden = false
+                _game = nil
+                
+            } else {
+                ui_currentPlayerLabel.text = gameInProgress.currentPlayer.nickname
+                ui_newGameButton.isHidden = true
+            }
+            
+
+            if gameInProgress.isGameOver,
+                let looser = gameInProgress.looser {
+                //looser.loss()
+                print("New Score Looser : \(looser.nickname) == \(looser.score)")
+                _playersArray[looser.nickname] = _playersArray[looser.nickname]! - 5
+                
+            }
+            
+            SettingsManager.instance.setPlayerArray(playersArray: _playersArray)
+            
+            ui_pick3MatchesButton.isHidden = matchesCount < 3
+            ui_pick2MatchesButton.isHidden = matchesCount < 2
+            ui_pick1MatchesButton.isHidden = matchesCount < 1
         } else {
-            ui_currentPlayerLabel.text = _currentPlayer
-            ui_newGameButton.isHidden = true
+            
+            
         }
-        
-        // Hide Buttons when the number of matches is less than button value
-        ui_pick3MatchesButton.isHidden = _matchesCount < 3
-        ui_pick2MatchesButton.isHidden = _matchesCount < 2
-        ui_pick1MatchesButton.isHidden = _matchesCount < 1
     }
     
+    // Remove matches
     @IBAction func pickMatches(_ button: UIButton) {
-        let matchesToRemove:Int = button.tag
-        _matchesCount = _matchesCount - matchesToRemove
-        _matchesCount = max(_matchesCount, 0)
-        if _currentPlayer == player1 {
-            _currentPlayer = player2
-        } else {
-            _currentPlayer = player1
+        if let gameInProgress = _game {
+            gameInProgress.removeMatches(matchesToRemove: button.tag)
         }
-        
-        // Timer for simulate the robot reflection
-        Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector  (ViewController.updateDisplay), userInfo: nil, repeats: false)
+        updateDisplay()
     }
     
     // Load UserDefaults values
     @IBAction func beginNewGame() {
-        _matchesCount = userDefaultsManager.integer(forKey: Settings.MATCHES_KEY)
-        _currentPlayer = player1
+        let name1 = _player1
+        let name2 = _player2
         
+        _game = Game(p1: Player(nickname: name1), p2: Player(nickname: name2), matchesCount: SettingsManager.instance.initialMatchesCount)
+
         updateDisplay()
     }
     
-    // Hide View
-    @IBAction func hiddenGame() {
-        dismiss(animated: true, completion: nil)
-    }
+
 }
 

@@ -30,7 +30,7 @@ class ViewStart: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource 
     override func viewWillAppear(_ animated: Bool) {
         userDefaultsManager.register(defaults: ["Player" : [:]])
         userDefaultsManager.register(defaults: ["Matches" : 20])
-        playersArray = userDefaultsManager.object(forKey: Player.PLAYER_KEY) as! [String:Int]
+        playersArray = SettingsManager.instance.getPlayerArray()
 
         // For 1 Player an Array List
         playersArray1player = ["Player 1"]

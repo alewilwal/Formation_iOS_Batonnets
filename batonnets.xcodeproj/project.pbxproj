@@ -15,9 +15,6 @@
 		8809C1481DD9E0CE00D72C91 /* ViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1471DD9E0CE00D72C91 /* ViewSettings.swift */; };
 		8809C1491DD9E0CE00D72C91 /* ViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1471DD9E0CE00D72C91 /* ViewSettings.swift */; };
 		8809C14A1DD9E0CE00D72C91 /* ViewSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C1471DD9E0CE00D72C91 /* ViewSettings.swift */; };
-		8809C14C1DD9F70600D72C91 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C14B1DD9F70600D72C91 /* Settings.swift */; };
-		8809C14D1DD9F70600D72C91 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C14B1DD9F70600D72C91 /* Settings.swift */; };
-		8809C14E1DD9F70600D72C91 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C14B1DD9F70600D72C91 /* Settings.swift */; };
 		8809C1501DDA0E8000D72C91 /* ViewPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C14F1DDA0E8000D72C91 /* ViewPlayers.swift */; };
 		8809C1511DDA0E8000D72C91 /* ViewPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C14F1DDA0E8000D72C91 /* ViewPlayers.swift */; };
 		8809C1521DDA0E8000D72C91 /* ViewPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8809C14F1DDA0E8000D72C91 /* ViewPlayers.swift */; };
@@ -27,6 +24,12 @@
 		8837BCD11DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BCD01DDEF93D00DEAA6A /* ViewScoresTable.swift */; };
 		8837BCD21DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BCD01DDEF93D00DEAA6A /* ViewScoresTable.swift */; };
 		8837BCD31DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BCD01DDEF93D00DEAA6A /* ViewScoresTable.swift */; };
+		8837BCD51DE088AD00DEAA6A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BCD41DE088AD00DEAA6A /* Game.swift */; };
+		8837BCD61DE088AD00DEAA6A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BCD41DE088AD00DEAA6A /* Game.swift */; };
+		8837BCD71DE088AD00DEAA6A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BCD41DE088AD00DEAA6A /* Game.swift */; };
+		8837BD631DE31D6100DEAA6A /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BD621DE31D6100DEAA6A /* SettingsManager.swift */; };
+		8837BD641DE31D6100DEAA6A /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BD621DE31D6100DEAA6A /* SettingsManager.swift */; };
+		8837BD651DE31D6100DEAA6A /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8837BD621DE31D6100DEAA6A /* SettingsManager.swift */; };
 		88F0884A1DD4732E006DA370 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F088491DD4732E006DA370 /* AppDelegate.swift */; };
 		88F0884C1DD4732E006DA370 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F0884B1DD4732E006DA370 /* ViewController.swift */; };
 		88F0884F1DD4732E006DA370 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F0884D1DD4732E006DA370 /* Main.storyboard */; };
@@ -60,10 +63,11 @@
 		8809C1391DD9D08400D72C91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8809C1411DD9D14000D72C91 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		8809C1471DD9E0CE00D72C91 /* ViewSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewSettings.swift; sourceTree = "<group>"; };
-		8809C14B1DD9F70600D72C91 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		8809C14F1DDA0E8000D72C91 /* ViewPlayers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPlayers.swift; sourceTree = "<group>"; };
 		8809C1531DDB016700D72C91 /* ViewStart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStart.swift; sourceTree = "<group>"; };
 		8837BCD01DDEF93D00DEAA6A /* ViewScoresTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewScoresTable.swift; sourceTree = "<group>"; };
+		8837BCD41DE088AD00DEAA6A /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		8837BD621DE31D6100DEAA6A /* SettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		88F088461DD4732E006DA370 /* batonnets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = batonnets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F088491DD4732E006DA370 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		88F0884B1DD4732E006DA370 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -142,7 +146,6 @@
 				88F088491DD4732E006DA370 /* AppDelegate.swift */,
 				88F0884B1DD4732E006DA370 /* ViewController.swift */,
 				8809C1411DD9D14000D72C91 /* Player.swift */,
-				8809C14B1DD9F70600D72C91 /* Settings.swift */,
 				88F0884D1DD4732E006DA370 /* Main.storyboard */,
 				88F088501DD4732E006DA370 /* Assets.xcassets */,
 				88F088521DD4732E006DA370 /* LaunchScreen.storyboard */,
@@ -151,6 +154,8 @@
 				8809C14F1DDA0E8000D72C91 /* ViewPlayers.swift */,
 				8809C1531DDB016700D72C91 /* ViewStart.swift */,
 				8837BCD01DDEF93D00DEAA6A /* ViewScoresTable.swift */,
+				8837BCD41DE088AD00DEAA6A /* Game.swift */,
+				8837BD621DE31D6100DEAA6A /* SettingsManager.swift */,
 			);
 			path = batonnets;
 			sourceTree = "<group>";
@@ -292,10 +297,11 @@
 				8809C1431DD9D14000D72C91 /* Player.swift in Sources */,
 				8809C1551DDB016800D72C91 /* ViewStart.swift in Sources */,
 				8809C1491DD9E0CE00D72C91 /* ViewSettings.swift in Sources */,
-				8809C14D1DD9F70600D72C91 /* Settings.swift in Sources */,
 				8837BCD21DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */,
+				8837BD641DE31D6100DEAA6A /* SettingsManager.swift in Sources */,
 				8809C12A1DD9CE9E00D72C91 /* batonnetsUITests.swift in Sources */,
 				8809C1511DDA0E8000D72C91 /* ViewPlayers.swift in Sources */,
+				8837BCD61DE088AD00DEAA6A /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,10 +312,11 @@
 				8809C1441DD9D14000D72C91 /* Player.swift in Sources */,
 				8809C1561DDB016800D72C91 /* ViewStart.swift in Sources */,
 				8809C14A1DD9E0CE00D72C91 /* ViewSettings.swift in Sources */,
-				8809C14E1DD9F70600D72C91 /* Settings.swift in Sources */,
 				8837BCD31DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */,
+				8837BD651DE31D6100DEAA6A /* SettingsManager.swift in Sources */,
 				8809C1381DD9D08400D72C91 /* batonnetsTests.swift in Sources */,
 				8809C1521DDA0E8000D72C91 /* ViewPlayers.swift in Sources */,
+				8837BCD71DE088AD00DEAA6A /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,12 +325,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				88F0884C1DD4732E006DA370 /* ViewController.swift in Sources */,
+				8837BCD51DE088AD00DEAA6A /* Game.swift in Sources */,
 				8809C1541DDB016800D72C91 /* ViewStart.swift in Sources */,
 				8837BCD11DDEF93D00DEAA6A /* ViewScoresTable.swift in Sources */,
 				8809C1481DD9E0CE00D72C91 /* ViewSettings.swift in Sources */,
 				8809C1421DD9D14000D72C91 /* Player.swift in Sources */,
 				88F0884A1DD4732E006DA370 /* AppDelegate.swift in Sources */,
-				8809C14C1DD9F70600D72C91 /* Settings.swift in Sources */,
+				8837BD631DE31D6100DEAA6A /* SettingsManager.swift in Sources */,
 				8809C1501DDA0E8000D72C91 /* ViewPlayers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

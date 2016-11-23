@@ -335,6 +335,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpf-qe-fCz">
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveInitialMatchesCount" destination="rDn-r2-fY3" eventType="touchUpInside" id="Bwm-qP-oGD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -344,7 +350,9 @@
                             <constraint firstItem="ngx-g8-6bC" firstAttribute="top" secondItem="53X-vm-f0x" secondAttribute="bottom" constant="5" id="Q9x-g8-mMh"/>
                             <constraint firstItem="9hK-cu-k8E" firstAttribute="top" secondItem="ngx-g8-6bC" secondAttribute="bottom" constant="5" id="V6w-aV-6go"/>
                             <constraint firstItem="ngx-g8-6bC" firstAttribute="leading" secondItem="gIk-hA-XVr" secondAttribute="leadingMargin" constant="20" id="dY3-jC-bOn"/>
+                            <constraint firstItem="Qpf-qe-fCz" firstAttribute="top" secondItem="9hK-cu-k8E" secondAttribute="bottom" constant="20" id="fvo-AO-cD1"/>
                             <constraint firstItem="53X-vm-f0x" firstAttribute="top" secondItem="pj4-UY-jLf" secondAttribute="bottom" constant="40" id="orm-6S-32q"/>
+                            <constraint firstItem="Qpf-qe-fCz" firstAttribute="centerX" secondItem="gIk-hA-XVr" secondAttribute="centerX" id="pPj-zB-tvN"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
